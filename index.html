@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only_FUN.com!!!</title>
+    <style>
+        body {
+            background-image: url('Utsav_cover.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+        }
+        h1{
+            font-size: xx-large;
+            color: yellow;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .caption {
+            font-style: italic;
+            color: gray;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            margin: 160px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            color: black;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Orchestrate Utsav's Antics: A Lighthearted Guju's Quotidian</h1>
+    <button onclick="showVideo('wave')">Utsav say hi!!!</button>
+    <button onclick="showVideo('dance')">Utsav Ko Nachao</button>
+    
+    <div id="wave" class="hidden">
+        <video width="300" autoplay loop muted>
+            <source src="Utsav_wave.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="caption" style="color: chartreuse;">"And that's how we survived another day of chaos. Cheers to more adventures! "</div>
+    </div>
+    
+    <div id="dance" class="hidden">
+        <video width="300" autoplay loop muted>
+            <source src="Utsav_dance.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="caption" style="color:chartreuse">"Bro dances better than Basanti."</div>
+    </div>
+
+    <script>
+        function showVideo(id) {
+            document.getElementById('wave').classList.add('hidden');
+            document.getElementById('dance').classList.add('hidden');
+            document.getElementById(id).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
